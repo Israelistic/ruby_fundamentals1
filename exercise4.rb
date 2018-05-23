@@ -40,36 +40,40 @@ def exercise4_3
 
 my_name = "haggai" # defied my name to a variable to compare later
 puts "what is your name?" 
-your_name = gets
+your_name = gets.chomp
 
-	if my_name .eql? your_name  # comparring the user string with my string 
+	 if my_name .eql? your_name  # comparring the user string with my string 
 
 		puts "we have the same name"
 
 	end
 	
-
+return your_name
 
 end
-
-def exercise4_4 (your_name)
-
-	if your_name.length > 10 
-			puts "Hi #{your_name}"  # # if the length of name is bigger then 10 characters print Hi and their nameme
-				elsif your_name.length < 10 
-					puts "Hello #{your_name}".  # if the length name is less then 10 characters print Hello and their name
-						elsif your_name.length == 10 
-							puts "Hey #{your_name}"   # if the lengt name  is equal then 10 characters print Hey and their name
-end
-
-
+=begin
 	
+
+the function is not getting the variable from the  previos function 
+=end
+
+
+def exercise4_4 ()
+	your_name = exercise4_3
+	if your_name.length > 10 
+		puts "Hi #{your_name}"  # # if the length of name is bigger then 10 characters print Hi and their nameme
+	elsif your_name.length < 10 
+		puts "Hello #{your_name}"  # if the length name is less then 10 characters print Hello and their name
+	elsif your_name.length == 10 
+		puts "Hey #{your_name}"   # if the lengt name  is equal then 10 characters print Hey and their name
+	end
 end
+
 
 def exercise4_5
 	secret_number = 88
 	puts "Please enter a number"
-	user_guess = gets.to_i
+	user_guess = gets.chomp
 
 		if secret_number .eql? user_guess
 			puts "You Win !!!"
@@ -77,7 +81,12 @@ def exercise4_5
 			puts "So close!"
 		else
 			puts "Try again"
+		end
+
+
 end
+
+
 
 
 exercise4_1
@@ -92,8 +101,9 @@ exercise4_3
 puts " get ready" 
 puts " new question.."
 sleep 1
-exercise4_4(your_name)
+exercise4_4()
 puts " get ready" 
 puts " new question.."
 sleep 1
 exercise4_5
+
